@@ -3,16 +3,16 @@
   "sqltools.connections": [
     {
       "mysqlOptions": {
-        "authProtocol": "xprotocol"
+        "authProtocol": "default"
       },
       "previewLimit": 50,
       "server": "localhost",
-      "port": 33060,
+      "port": 3306,
       "driver": "MySQL",
       "name": "Expense Tracker",
       "database": "expensetrackerdb",
-      "username": "root",
-      "password": "Qwertzui1",
+      "username": "markus",
+      "password": "1323",
       "connectionTimeout": 15
     }
   ]
