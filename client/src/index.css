@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+  
+}
+
+/* Hiding scrollbars */
+html {
+  visibility: hidden;
+  overflow: scroll;
+}
+
+html:not(*:root) {
+visibility: visible;
+}
+
+html::-webkit-scrollbar {
+visibility: hidden;
+}
+
+body {
+  visibility: visible;
+}

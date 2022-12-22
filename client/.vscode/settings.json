@@ -1,0 +1,31 @@
+{
+  "sqltools.autoConnectTo": "",
+  "sqltools.autoOpenSessionFiles": false,
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "LocalDB",
+      "database": "expenses",
+      "username": "root",
+      "password": ""
+    }
+  ],
+  "sqltools.dependencyManager": {
+
+    "packageManager": "npm",
+    "installArgs": [
+      "install"
+    ],
+    "runScriptArgs": [
+      "run"
+    ],
+    "autoAccept": false
+  },
+  "sqltools.showStatusbar": true
+}
