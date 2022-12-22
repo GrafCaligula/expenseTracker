@@ -1,10 +1,15 @@
-import React from "react";
 
-import classes from "./Card.module.css"
+import React from 'react';
 
+import classes from './Card.module.css';
+/**
+ * Card Wrapper for Components (visual only)
+ */
 const Card = (props) => {
-  // Übergabe der Klassen durch props an den Custom-Card-Wrapperprops children is always there 
-  return <div className={classes.card + " " + props.className}>{props.children}</div>
-}
+  // Übergabe der Klassen durch props an den Custom-Card-Wrapperprops children is always there
+  return (
+    <div className={classes.card + ' ' + props.className}>{props.children}</div>
+  );
+};
 
 export default Card;

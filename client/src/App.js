@@ -1,3 +1,7 @@
+/**
+ * @author Markus Klöpper
+ * @version 0.5.0
+ */
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 

@@ -15,5 +15,6 @@
       "password": "1323",
       "connectionTimeout": 15
     }
-  ]
+  ],
+  "js/ts.implicitProjectConfig.checkJs": false
 }
