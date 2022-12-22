@@ -17,6 +17,10 @@ import DeleteModal from './components/UI/DeleteModal';
 //.[x]
 //.TODO
 
+/**
+ * App to track expenses
+ * @Component
+ */
 const App = () => {
   // Hooks
   const showDeleteModal = useSelector(

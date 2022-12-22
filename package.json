@@ -17,6 +17,7 @@
     "concurrently": "^7.6.0"
   },
   "devDependencies": {
+    "better-docs": "^2.7.2",
     "jsdoc": "^4.0.0"
   }
 }

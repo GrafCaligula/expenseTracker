@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { expActions } from '../../store/expenses-slice';
@@ -15,6 +15,10 @@ const NewExpense = () => {
   );
 
   // Event Handlers
+  /**
+   * dispatches action to toggle the "New Expenses" Form
+   * @param {Object} event 
+   */
   const showFormHandler = (event) => {
     event.preventDefault();
     dispatch(expActions.toggleExpenseForm());
