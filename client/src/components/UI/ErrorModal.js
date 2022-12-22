@@ -4,6 +4,10 @@ import { createPortal } from 'react-dom';
 import Backdrop from './Modals/Backdrop';
 import ErrorOverlay from './Modals/ErrorOverlay';
 
+/**
+ * Component to show an Error modal
+ * @Component 
+ */
 const ErrorModal = () => {
   return (
     <Fragment>

@@ -2,6 +2,10 @@ import React from "react";
 
 import classes from "./Input.module.css";
 
+/**
+ * Custom Input Component
+ * @Component 
+ */
 const Input = (props) => {
   return (
     <div className={classes["new-expense__control"]}>

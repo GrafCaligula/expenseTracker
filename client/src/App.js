@@ -23,6 +23,10 @@ import DeleteModal from './components/UI/DeleteModal';
  */
 const App = () => {
   // Hooks
+  /**
+   * state for showing a Delete Modal
+   * @type {boolean}
+   */
   const showDeleteModal = useSelector(
     (state) => state.expenses.showDeleteModal
   );

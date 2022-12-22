@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>App.js - Documentation</title>
+    <title>components/UI/DeleteModal.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">App.js</h1>
+    <h1 class="page-title">components/UI/DeleteModal.js</h1>
     
 
     
@@ -45,49 +45,29 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @author Markus Klöpper
- * @version 0.5.0
- */
-import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
+            <pre class="prettyprint source linenums"><code>import React, { Fragment } from 'react';
+import { createPortal } from 'react-dom';
 
-import NewExpense from './components/NewExpense/NewExpense';
-import Expenses from './components/Expenses/Expenses';
-import DeleteModal from './components/UI/DeleteModal';
-
-//.BUG
-//.HACK
-//.FIXME
-//.XXX
-//.[ ]
-//.[x]
-//.TODO
+import Backdrop from './Modals/Backdrop';
+import DeleteOverlay from './Modals/DeleteOverlay';
 
 /**
- * App to track expenses
- * @Component
+ * Component to show a confirmation modal for deleting expenses
+ * @Component 
  */
-const App = () => {
-  // Hooks
-  /**
-   * state for showing a Delete Modal
-   * @type {boolean}
-   */
-  const showDeleteModal = useSelector(
-    (state) => state.expenses.showDeleteModal
-  );
-
+const ConfirmModal = () => {
   return (
     &lt;Fragment>
-      {showDeleteModal &amp;&amp; &lt;DeleteModal />}
-      &lt;NewExpense />
-      &lt;Expenses />
+      {createPortal(&lt;Backdrop />, document.getElementById('backdrop-root'))}
+      {createPortal(
+        &lt;DeleteOverlay />,
+        document.getElementById('overlay-root')
+      )}
     &lt;/Fragment>
   );
 };
 
-export default App;
+export default ConfirmModal;
 </code></pre>
         </article>
     </section>

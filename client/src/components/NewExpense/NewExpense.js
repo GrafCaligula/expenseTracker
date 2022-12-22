@@ -7,6 +7,10 @@ import ExpenseForm from './ExpenseForm';
 import Card from '../UI/Card';
 import classes from './NewExpense.module.css';
 
+/**
+ * Component to render a Expense form
+ * @Component
+ */
 const NewExpense = () => {
   // Hooks
   const dispatch = useDispatch();
@@ -17,7 +21,7 @@ const NewExpense = () => {
   // Event Handlers
   /**
    * dispatches action to toggle the "New Expenses" Form
-   * @param {Object} event 
+   * @param {Object} event Click event 
    */
   const showFormHandler = (event) => {
     event.preventDefault();

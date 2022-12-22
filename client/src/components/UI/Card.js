@@ -6,10 +6,10 @@ import classes from './Card.module.css';
  * @Component
  * @example
  * <Card>
-      <ExpensesFilter />
-      <ExpensesChart />
-      <ExpensesList />
-    </Card>
+    <ExpensesFilter />
+    <ExpensesChart />
+    <ExpensesList />
+  </Card>
  */
 const Card = (props) => {
   // Übergabe der Klassen durch props an den Custom-Card-Wrapperprops children is always there
