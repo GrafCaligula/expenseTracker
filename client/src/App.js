@@ -1,7 +1,3 @@
-/**
- * @author Markus Klöpper
- * @version 0.5.0
- */
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -19,14 +15,12 @@ import DeleteModal from './components/UI/DeleteModal';
 
 /**
  * App to track expenses
- * @Component
+ * @component
+ * @kind React Component
+ * 
  */
 const App = () => {
-  // Hooks
-  /**
-   * state for showing a Delete Modal
-   * @type {boolean}
-   */
+  // Hooks  
   const showDeleteModal = useSelector(
     (state) => state.expenses.showDeleteModal
   );
@@ -39,5 +33,6 @@ const App = () => {
     </Fragment>
   );
 };
+
 
 export default App;

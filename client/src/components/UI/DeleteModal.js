@@ -4,11 +4,7 @@ import { createPortal } from 'react-dom';
 import Backdrop from './Modals/Backdrop';
 import DeleteOverlay from './Modals/DeleteOverlay';
 
-/**
- * Component to show a confirmation modal for deleting expenses
- * @Component 
- */
-const ConfirmModal = () => {
+const DeleteModal = () => {
   return (
     <Fragment>
       {createPortal(<Backdrop />, document.getElementById('backdrop-root'))}
@@ -20,4 +16,4 @@ const ConfirmModal = () => {
   );
 };
 
-export default ConfirmModal;
+export default DeleteModal;

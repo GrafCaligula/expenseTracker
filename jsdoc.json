@@ -1,6 +1,5 @@
 {
-  "plugins": ["plugins/markdown", "better-docs/component"],
-  "recurseDepth": 10,
+  "plugins": ["plugins/markdown", "node_modules/better-docs/component"],
   "source": {
       "include": ["./client/src/"],
       "includePattern": ".+\\.js(doc|x)?$",
@@ -18,7 +17,9 @@
   },
   "opts": {
     "recurse": true,
+    "verbose": true,
     "destination": "./docs/",
     "template": "docdash"   
+    
   }
 } 

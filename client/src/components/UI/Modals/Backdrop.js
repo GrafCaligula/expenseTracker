@@ -6,7 +6,7 @@ import { expActions } from '../../../store/expenses-slice';
 import classes from './Backdrop.module.css';
 
 const Backdrop = () => {
-  // Hooks
+
   const dispatch = useDispatch();
 
   const closeBackdropHandler = () => {

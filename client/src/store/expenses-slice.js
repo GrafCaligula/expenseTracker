@@ -1,3 +1,4 @@
+//@ts-check
 import { createSlice } from '@reduxjs/toolkit';
 import Axios from 'axios';
 
@@ -16,6 +17,7 @@ const initialExpensesState = {
   },
   inputError: null,
 };
+
 
 const expensesSlice = createSlice({
   name: 'expenses',

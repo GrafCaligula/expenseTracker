@@ -27,10 +27,7 @@ const ExpenseItem = (props) => {
           <div className={classes['expense-item__price']}>
             {props.amount + ' €'}
           </div>
-          <button
-            className={classes.button}
-            onClick={deleteExpenseHandler}
-          >
+          <button className={classes.button} onClick={deleteExpenseHandler}>
             <FaRegTrashAlt className={classes.trashIcon} />
           </button>
         </div>
@@ -38,5 +35,6 @@ const ExpenseItem = (props) => {
     </ul>
   );
 };
+
 
 export default ExpenseItem;

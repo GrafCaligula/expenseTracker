@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>components/UI/DeleteModal.js - Documentation</title>
+    <title>components/Expenses/ExpenseItem.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">components/UI/DeleteModal.js</h1>
+    <h1 class="page-title">components/Expenses/ExpenseItem.js</h1>
     
 
     
@@ -45,29 +45,63 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import React, { Fragment } from 'react';
-import { createPortal } from 'react-dom';
+            <pre class="prettyprint source linenums"><code>import React from 'react';
 
-import Backdrop from './Modals/Backdrop';
-import DeleteOverlay from './Modals/DeleteOverlay';
+import { useDispatch } from 'react-redux';
+import { expActions } from '../../store/expenses-slice';
+
+import Card from '../UI/Card';
+import ExpenseDate from './ExpenseDate';
+
+import { FaRegTrashAlt } from 'react-icons/fa';
+import classes from './ExpenseItem.module.css';
 
 /**
- * Component to show a confirmation modal for deleting expenses
- * @Component 
+ * @component
+ * @example
+ * const id = 43
+ * const title = Test Expense
+ * const amount = 111.99
+ * const date = 2020-01-01
+ * return (
+ *  &lt;ExpenseItem
+      key={id}
+      id={id}
+      title={title}
+      amount={amount}
+      date={new Date(date)}
+    />
+ * )
  */
-const ConfirmModal = () => {
+const ExpenseItem = (props) => {
+  //Hooks
+  const dispatch = useDispatch();
+
+  //EventHandlers
+  const deleteExpenseHandler = (event) => {
+    dispatch(expActions.toggleDeleteModal(props.id));
+  };
+
   return (
-    &lt;Fragment>
-      {createPortal(&lt;Backdrop />, document.getElementById('backdrop-root'))}
-      {createPortal(
-        &lt;DeleteOverlay />,
-        document.getElementById('overlay-root')
-      )}
-    &lt;/Fragment>
+    &lt;ul className={classes['expense-item__list']}>
+      &lt;Card className={classes['expense-item']}>
+        &lt;ExpenseDate date={props.date} />
+        &lt;div className={classes['expense-item__description']}>
+          &lt;h2>{props.title}&lt;/h2>
+          &lt;div className={classes['expense-item__price']}>
+            {props.amount + ' €'}
+          &lt;/div>
+          &lt;button className={classes.button} onClick={deleteExpenseHandler}>
+            &lt;FaRegTrashAlt className={classes.trashIcon} />
+          &lt;/button>
+        &lt;/div>
+      &lt;/Card>
+    &lt;/ul>
   );
 };
 
-export default ConfirmModal;
+
+export default ExpenseItem;
 </code></pre>
         </article>
     </section>
