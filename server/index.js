@@ -5,9 +5,10 @@
  * @name ExpressServer
  */
 const express = require('express');
-const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
+
+const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -69,4 +70,3 @@ const message = () => {
 };
 
 app.listen(port, message); // to start the server: in folder write: "node index.js"
-
