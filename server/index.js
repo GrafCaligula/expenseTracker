@@ -1,3 +1,9 @@
+/**
+ * Express Server Setup
+ * @component ExpressServer
+ * @namespace ExpressServer
+ * @name ExpressServer
+ */
 const express = require('express');
 const app = express();
 const mysql = require('mysql');

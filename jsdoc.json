@@ -1,7 +1,8 @@
 {
   "plugins": ["plugins/markdown", "node_modules/better-docs/component"],
   "source": {
-      "include": ["./client/src/"],
+      "include": ["./client/src/", "./server/index.js"],
+      "exclude": "/server/node_modules/",
       "includePattern": ".+\\.js(doc|x)?$",
       "excludePattern": "(^|\\/|\\\\)_"
   },
@@ -19,7 +20,7 @@
     "recurse": true,
     "verbose": true,
     "destination": "./docs/",
-    "template": "docdash"   
+    "template": "./docdash"   
     
   }
 } 
