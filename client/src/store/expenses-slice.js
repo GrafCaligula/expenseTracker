@@ -1,4 +1,3 @@
-//@ts-check
 import { createSlice } from '@reduxjs/toolkit';
 import Axios from 'axios';
 
@@ -42,7 +41,7 @@ const expensesSlice = createSlice({
       //Delete from DB
       const url = `http://localhost:3001/delete/${state.currentExpense}`;
       Axios.delete(url).then((response) => console.log(response.data));
-      //DElete from State
+      //Delete from State
       const updatedExpenses = state.expenses.filter(
         (expense) => expense.id !== state.currentExpense
       );
