@@ -1,6 +1,5 @@
 /**
  * Express Server Setup
- * @component ExpressServer
  * @namespace ExpressServer
  * @name ExpressServer
  */
